@@ -1,5 +1,5 @@
 # Formula/kubectl-mounts.rb
-class Kubectl-mounts < Formula
+class KubectlMounts < Formula
   desc "Show Pod Volumes and VolumeMounts in the cluster"
   homepage "https://github.com/yeqianmen/kubectl-mounts"
   version "v0.0.4"
@@ -7,21 +7,17 @@ class Kubectl-mounts < Formula
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/yeqianmen/kubectl-mounts/releases/download/v0.0.4/kubectl-mounts_darwin_amd64" 
-      sha256 "17d07778bb0ab7ff1ce38499ec3a70cffa395a0af86a51d4b1658e17b415d3c5"
+      url "https://github.com/yeqianmen/kubectl-mounts/releases/download/v0.0.4/kubectl-mounts_darwin_amd64.tar.gz"
+      sha256 "74a8c3e5c44ad0ab44f0b3ae001e3bd3a87595fa916b22b785af44835e191774"
     end
     if Hardware::CPU.arm?
-      url "https://github.com/yeqianmen/kubectl-mounts/releases/download/v0.0.4/kubectl-mounts_darwin_arm64"
-      sha256 "998c8cfd7707e2ed46b35397bd8e1ab0999b39ecab65325275ce9873fdb19fc8"
+      url "https://github.com/yeqianmen/kubectl-mounts/releases/download/v0.0.4/kubectl-mounts_darwin_arm64.tar.gz"
+      sha256 "dd6b762aea89c20bb337d7fa0ac8afc61aa3f25d88655ef663036e482aac8d34"
     end
   end
 
-  def install
-    if Hardware::CPU.intel?
-      bin.install "kubectl-mounts-x86_64-apple-darwin" => "kubectl-mounts"
-    elsif Hardware::CPU.arm?
-      bin.install "kubectl-mounts-aarch64-apple-darwin" => "kubectl-mounts"
-    end
+ def install
+    bin.install "kubectl-mounts"
   end
 
   test do

@@ -5,21 +5,21 @@
 class KubectlMounts < Formula
   desc "A kubectl plugin to display pod volumes and volumeMounts."
   homepage "https://github.com/yeqianmen/kubectl-mounts"
-  version "0.1.1"
+  version "0.1.2"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/yeqianmen/kubectl-mounts/releases/download/v0.1.1/kubectl-mounts_darwin_amd64.tar.gz"
-      sha256 "4302379b369d194fd103c97a091918b54a318a5a9b15f9f17db893a17f16127a"
+      url "https://github.com/yeqianmen/kubectl-mounts/releases/download/v0.1.2/kubectl-mounts_darwin_amd64.tar.gz"
+      sha256 "db50743b16d07e100b4b96d2fcfe2075d86744c5d32133176179cd227c2ef750"
 
       def install
         bin.install "kubectl-mounts"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/yeqianmen/kubectl-mounts/releases/download/v0.1.1/kubectl-mounts_darwin_arm64.tar.gz"
-      sha256 "5ca3506ffffbcec12aaaf351b19ebe0f3d456caebd06003d10f387940e42f063"
+      url "https://github.com/yeqianmen/kubectl-mounts/releases/download/v0.1.2/kubectl-mounts_darwin_arm64.tar.gz"
+      sha256 "d199fc7d7b11fcb1c1b047a5061eaca607bc82e6f5dc48ca8af02951d3cdc8a4"
 
       def install
         bin.install "kubectl-mounts"
@@ -29,22 +29,22 @@ class KubectlMounts < Formula
 
   on_linux do
     if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/yeqianmen/kubectl-mounts/releases/download/v0.1.1/kubectl-mounts_linux_amd64.tar.gz"
-      sha256 "bfd96f924ba91ff7572548b77993f11800a77b246c52d3e497983ca6a90d8670"
+      url "https://github.com/yeqianmen/kubectl-mounts/releases/download/v0.1.2/kubectl-mounts_linux_amd64.tar.gz"
+      sha256 "5df7783fd4c1003ff153fc3796f33e476d057ab0ffd146f42144c9fe886b4d39"
       def install
         bin.install "kubectl-mounts"
       end
     end
     if Hardware::CPU.arm? and !Hardware::CPU.is_64_bit?
-      url "https://github.com/yeqianmen/kubectl-mounts/releases/download/v0.1.1/kubectl-mounts_linux_arm.tar.gz"
-      sha256 "c8b9e57d4834d07a06b32096e2fd538a4e7d06f4590fbeb69b81b96e4baa30a6"
+      url "https://github.com/yeqianmen/kubectl-mounts/releases/download/v0.1.2/kubectl-mounts_linux_arm.tar.gz"
+      sha256 "397648637f10076504348cd1b8c4910df7fc49c05a9b24281370c6845b571cd9"
       def install
         bin.install "kubectl-mounts"
       end
     end
     if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/yeqianmen/kubectl-mounts/releases/download/v0.1.1/kubectl-mounts_linux_arm64.tar.gz"
-      sha256 "1ddff6e27d903b2d50c2d826dd657940235f3b13af7d6c447cd3160821637084"
+      url "https://github.com/yeqianmen/kubectl-mounts/releases/download/v0.1.2/kubectl-mounts_linux_arm64.tar.gz"
+      sha256 "84c6421ecc076600d0d6534dec00be15e95c8080a4fb1642eed0c08d3f4386a8"
       def install
         bin.install "kubectl-mounts"
       end

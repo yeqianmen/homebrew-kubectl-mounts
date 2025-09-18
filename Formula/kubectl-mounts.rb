@@ -11,7 +11,7 @@ class KubectlMounts < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/yeqianmen/kubectl-mounts/releases/download/v0.1.3/kubectl-mounts_darwin_amd64.tar.gz"
-      sha256 "5b0cf2a42ad01486ca3e1b7d73bb63201effb55880d834bfe8cbe2ef45c1e08f"
+      sha256 "f24c1fce12e706d786deb65484141bd29f36924f76cda67b5fa7ca3032145c08"
 
       def install
         bin.install "kubectl-mounts"
@@ -19,7 +19,7 @@ class KubectlMounts < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/yeqianmen/kubectl-mounts/releases/download/v0.1.3/kubectl-mounts_darwin_arm64.tar.gz"
-      sha256 "6728396843bd1f2681dac16ec5c0ff6037d9265c3a8bbbbd7c1bc9dfadec2574"
+      sha256 "a19b434b836114ebee35d0ac52cf7b5d92e77c6c0777d8f280e6bd09b8d43f55"
 
       def install
         bin.install "kubectl-mounts"
@@ -30,21 +30,21 @@ class KubectlMounts < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/yeqianmen/kubectl-mounts/releases/download/v0.1.3/kubectl-mounts_linux_amd64.tar.gz"
-      sha256 "5d2fe73c5f8d5eeb7f85542ac2235e2943ccfcee7fd20592039cf1ec7083eb7a"
+      sha256 "4262e4dcaec83fc718df631f1ec3319c8a677ad1a37dc1e5188344e573a53828"
       def install
         bin.install "kubectl-mounts"
       end
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
       url "https://github.com/yeqianmen/kubectl-mounts/releases/download/v0.1.3/kubectl-mounts_linux_arm.tar.gz"
-      sha256 "be05078f36d1067e0043f4834324eed488b0ff677c91b268f80bbc771e81750e"
+      sha256 "1fd69ba7a553d804630aa000f32b37d9fc29284d50b0170ff843e9c3eea97c8a"
       def install
         bin.install "kubectl-mounts"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/yeqianmen/kubectl-mounts/releases/download/v0.1.3/kubectl-mounts_linux_arm64.tar.gz"
-      sha256 "e899082b017b987c745ad617a552c4a9f201b6a0d21cd54f257380da3f549029"
+      sha256 "3d59ac713c26a1cfa3a65e53391c3846d13c3df29b6157b6b55dc1da97247b97"
       def install
         bin.install "kubectl-mounts"
       end
